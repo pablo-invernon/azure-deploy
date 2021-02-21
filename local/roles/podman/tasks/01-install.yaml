@@ -1,7 +1,0 @@
----
-
-- name: instalando las herramientas para la gestion de contenedores
-  yum:
-    name: "{{ container_rpms }}"
-    state: present
-  become: yes

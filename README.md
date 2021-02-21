@@ -24,5 +24,19 @@ Los despliegues se han realizado utilizando máqinas virtualizadas con VirtualBo
  
  - VBoxManage clonevm centostemplate --basefolder c:\desarrollo\vbox --mode=all --name=lab-docker --register
 
+ Creada template con:
+
+ - IP: 111
+ - Usuarios: root / user / ansible
+ - Password: centostemplate
+ - Clave RSA : ~/.ssh/id_rsa
+
+
 recreate_nfs.cmd
 ansible-playbook -i hosts -l lab-new-host.local --extra-vars="target_hostname=lab-nfs.local" base-config.yaml
+recreate_master.cmd
+ansible-playbook -i hosts -l lab-new-host.local --extra-vars="target_hostname=lab-master.local" onebyone-base-config.yaml
+recreate_workder.cmd 1
+ansible-playbook -i hosts -l lab-new-host.local --extra-vars="target_hostname=lab-worker-1.local" onebyone-base-config.yaml
+recreate_worker.cmd 2
+ansible-playbook -i hosts -l lab-new-host.local --extra-vars="target_hostname=lab-worker-2.local" onebyone-base-config.yaml

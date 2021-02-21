@@ -1,6 +1,7 @@
 ---
 
 network_mask: "255.255.255.0"
+network: "192.168.56.0/24"
 network_device: "enp0s3"
 network_hostnames: [ "lab-nfs.local", "lab-master.local", "lab-worker-1.local", "lab-worker-2.local"]
 network_uuids:

@@ -3,12 +3,14 @@ lab-new-host.local
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python
-ansible_user=user
+ansible_user=ansible
 
 [machines]
 lab-nfs.local
 lab-master.local
 lab-worker-1.local
+lab-worker-2.local
 
-[podman]
-lab-podman.local
+[nfsserver]
+lab-nfs.local
+
