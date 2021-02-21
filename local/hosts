@@ -1,0 +1,14 @@
+lab-new-host.local
+
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python
+ansible_user=user
+
+[machines]
+lab-nfs.local
+lab-master.local
+lab-worker-1.local
+
+[podman]
+lab-podman.local
