@@ -1,0 +1,12 @@
+---
+
+- name: enable epel repository
+  yum:
+    name: "{{ epel_repo }}"
+    state: latest
+  become: yes
+
+#- name: enable powertools repository
+#  yum:
+#    enablerepo: "powertools"
+#  become: yes

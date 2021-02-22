@@ -1,0 +1,27 @@
+---
+
+- name: Create a volume group for k8s exported space
+  lvg:
+    vg: vg.nfs
+    pvs: /dev/sdb
+    pesize: 32M
+    state: present
+
+- name: Create a logical volume of 512m with disks /dev/sda and /dev/sdb
+  lvol:
+    vg: vg.nfs
+    lv: k8s
+    size: 100%FREE
+    shrink: no
+
+- name: Create k8s filesystem
+  filesystem:
+    dev: /dev/vg.nfs/k8s
+    fstype: ext4
+
+- name: Mount K8S space
+  mount:
+    path: /srv/nfs/k8s
+    src: /dev/vg.nfs/k8s
+    fstype: ext4
+    state: present

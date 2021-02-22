@@ -1,0 +1,8 @@
+---
+
+#- name: install service packages
+#  yum:
+#    name: "{{ rpms.nfs }}"
+#    state: latest
+#  become: yes
+

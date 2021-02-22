@@ -1,0 +1,28 @@
+---
+
+- name: configure exported path
+  file:
+    path: /srv/nfs/k8s
+    state: directory
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: create exports file
+  copy:
+    content: ""
+    dest: /etc/exports.d/k8s.exports
+    owner: root
+    group: root
+    mode: "0644"
+    force: no
+
+- name: define filesystem export
+  lineinfile:
+    path: /etc/exports.d/k8s.exports
+    regexp: "^/srv/nfs/k8s "
+    line: /srv/nfs/k8s {{ network }}(sync,wdelay,hide,no_subtree_check,sec=sys,rw,secure,root_squash,no_all_squash)
+    state: present
+
+
+

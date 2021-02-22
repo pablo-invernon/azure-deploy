@@ -1,0 +1,11 @@
+---
+
+- name: configurar red 
+  hosts: all
+  become: true
+  become_user: root
+  gather_facts: true
+  vars_files:
+    - group_vars/network.yaml
+  roles:
+    - one-by-one

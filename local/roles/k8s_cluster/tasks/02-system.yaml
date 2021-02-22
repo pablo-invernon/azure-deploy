@@ -1,0 +1,26 @@
+---
+
+- name: config system parameters
+  sysctl:
+    name: net.bridge.bridge-nf-call-ip6tables
+    sysctl_file: /etc/sysctl.d/k8s.conf
+    reload: yes
+    value: "1"
+    state: present
+
+- name: config system parameters
+  sysctl:
+    name: net.bridge.bridge-nf-call-iptables
+    sysctl_file: /etc/sysctl.d/k8s.conf
+    reload: yes
+    value: "1"
+    state: present
+
+- name: disable swap on k8s nodes
+  command: "swapoff -a"
+
+- name: remove swap config line at fstab
+  lineinfile:
+    path: /etc/fstab
+    state: absent
+    regexp: '^.* swap .*'

@@ -1,0 +1,9 @@
+---
+
+- name: define filesystem export
+  lineinfile:
+    path: /etc/hosts
+    regexp: "^{{ item.value }} {{ item.key}}$"
+    line: "{{ item.value }} {{ item.key}} "
+    state: present
+  with_dict: "{{ network_ips }}"

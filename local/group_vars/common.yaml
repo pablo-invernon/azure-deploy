@@ -1,0 +1,13 @@
+---
+
+rpms:
+  commons: ['yum-utils', 'chrony', 'net-tools', 'jq', 'nfs-utils']
+  nfs: [ ]
+
+services:
+  commons: [ 'chronyd', 'firewalld' ]
+  nfs: [ 'rpcbind', 'nfs-server', 'nfs-lock', 'nfs-idmap']
+
+#epel_repo: 'https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm'
+
+#dive_rpm: 'https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.rpm'

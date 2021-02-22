@@ -1,0 +1,6 @@
+---
+
+- include_tasks: 00-filesystems.yaml
+- include_tasks: 01-rpms.yaml
+- include_tasks: 02-exportsfs.yaml
+- include_tasks: 03-services.yaml

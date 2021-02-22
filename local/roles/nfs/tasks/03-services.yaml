@@ -1,0 +1,19 @@
+---
+
+- name: enable nfs services
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+    masked: no
+  become: yes
+  with_items:
+    - "{{ services.nfs }}"
+
+- name: configure firewalld rules
+  firewalld:
+    service: "{{ item }}"
+    permanent: yes
+    immediate: yes
+    state: enabled
+  loop: "{{ ['mountd', 'nfs', 'rpc-bind'] | list }}"

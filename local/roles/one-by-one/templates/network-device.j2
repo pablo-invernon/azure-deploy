@@ -1,0 +1,17 @@
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=no
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+IPADDR={{ network_ips[target_hostname] }}
+NAME={{ network_device }}
+UUID={{ network_uuids[target_hostname] }}
+NETMASK={{ network_mask }}
+DEVICE={{ network_device }}
+ONBOOT=yes

@@ -1,0 +1,24 @@
+---
+
+- name: check remote fs available
+  block:
+    - name: execute command
+      command: "showmount -e lab-nfs.local"
+      register: mounts 
+    - name: verify returned values in mounts
+      assert:
+        that:
+          "{{ mounts.rc == 0}}"
+
+- name: add br_netfilter module
+  modprobe:
+    name: br_netfilter
+    state: present
+
+- name: enable firewall masquerading
+  firewalld:
+    immediate: yes
+    masquerade: yes
+    permanent: yes
+    state: enabled
+    
