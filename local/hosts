@@ -11,6 +11,11 @@ lab-master.local
 lab-worker-1.local
 lab-worker-2.local
 
-[nfsserver]
+[nfsservers]
 lab-nfs.local
+
+[k8sservers]
+lab-master.local
+lab-worker-1.local
+lab-worker-2.local
 

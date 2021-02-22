@@ -2,3 +2,4 @@
 
 - include_tasks: 01-rpms.yaml
 - include_tasks: 02-services.yaml
+- include_tasks: 03-network.yaml
