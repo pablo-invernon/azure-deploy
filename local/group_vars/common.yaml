@@ -2,11 +2,15 @@
 
 rpms:
   commons: ['yum-utils', 'chrony', 'net-tools', 'jq', 'nfs-utils']
+  k8scluster: [ 'nfs4-acl-tools', 'wget']
+  kubernetes: [ 'kubelet', 'kubeadm', 'kubectl' ]
+  docker: [ 'docker-ce-19.03.11-3.el7', 'containerd.io' ]
   nfs: [ ]
 
 services:
   commons: [ 'chronyd', 'firewalld' ]
   nfs: [ 'rpcbind', 'nfs-server', 'nfs-lock', 'nfs-idmap']
+  k8scluster: [ 'docker', 'kubelet' ]
 
 #epel_repo: 'https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm'
 

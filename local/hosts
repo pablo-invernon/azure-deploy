@@ -19,3 +19,10 @@ lab-master.local
 lab-worker-1.local
 lab-worker-2.local
 
+[masters]
+lab-master.local
+
+[workers]
+lab-worker-1.local
+lab-worker-2.local
+

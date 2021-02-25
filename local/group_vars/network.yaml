@@ -2,8 +2,10 @@
 
 network_mask: "255.255.255.0"
 network: "192.168.56.0/24"
+network_pods: "192.169.0.0/16"
 network_device: "enp0s3"
 network_hostnames: [ "lab-nfs.local", "lab-master.local", "lab-worker-1.local", "lab-worker-2.local"]
+workers_ips: [ '192.168.56.105', '192.168.56.106']
 network_uuids:
   lab-nfs.local: "5050c7fc-abdb-4679-b4c7-33b7926f7fd6"
   lab-master.local: "413f7494-d701-4cac-aa5a-8e1659ec2032"

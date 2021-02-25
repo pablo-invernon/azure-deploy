@@ -1,5 +1,10 @@
 ---
 
+- name: upgrade installed packages
+  yum:
+    update_only: yes
+    state: latest
+
 - name: install common packages
   yum:
     name: "{{ rpms.commons }}"

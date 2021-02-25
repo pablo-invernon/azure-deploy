@@ -3,3 +3,10 @@
 
 - include_tasks: 01-network.yaml
 - include_tasks: 02-system.yaml
+- include_tasks: 03-install.yaml
+- include_tasks: 04-services.yaml
+- include_tasks: 05-kubernetes.yaml
+- include_tasks: 06-root-auth.yaml
+- include_tasks: 07-kubernetes.yaml
+- include_tasks: 08-kubernetes.yaml
+- include_tasks: 09-kubernetes.yaml
