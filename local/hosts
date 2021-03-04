@@ -1,9 +1,12 @@
+
+
 lab-new-host.local
 
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python
 ansible_user=ansible
+
 
 [machines]
 lab-nfs.local
@@ -25,4 +28,7 @@ lab-master.local
 [workers]
 lab-worker-1.local
 lab-worker-2.local
+
+[orchestrators]
+lab-terrazure.local
 

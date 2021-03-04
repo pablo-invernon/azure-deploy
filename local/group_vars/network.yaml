@@ -4,15 +4,17 @@ network_mask: "255.255.255.0"
 network: "192.168.56.0/24"
 network_pods: "192.169.0.0/16"
 network_device: "enp0s3"
-network_hostnames: [ "lab-nfs.local", "lab-master.local", "lab-worker-1.local", "lab-worker-2.local"]
+network_hostnames: [ "lab-nfs.local", "lab-master.local", "lab-worker-1.local", "lab-worker-2.local", "lab-terrazure"]
 workers_ips: [ '192.168.56.105', '192.168.56.106']
 network_uuids:
   lab-nfs.local: "5050c7fc-abdb-4679-b4c7-33b7926f7fd6"
   lab-master.local: "413f7494-d701-4cac-aa5a-8e1659ec2032"
   lab-worker-1.local: "99dbc060-141e-4acc-a4ad-7c48927a5861"
   lab-worker-2.local: "047e3609-2974-46f3-bde4-e5709b46945a"
+  lab-terrazure.local: "2e0cb997-0bfa-44ab-b6bd-1de8742e46da"
 network_ips:
   lab-nfs.local: "192.168.56.109"
   lab-master.local: "192.168.56.104"
   lab-worker-1.local: "192.168.56.105"
   lab-worker-2.local: "192.168.56.106"
+  lab-terrazure.local: "192.168.56.122"
